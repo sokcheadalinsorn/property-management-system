@@ -12,3 +12,4 @@ class TenantController extends Controller
         return Tenant::all();
     }
 }
+

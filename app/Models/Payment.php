@@ -18,4 +18,12 @@ class Payment extends Model
         'update_at',
     ];
 
+    // Relationship many payments has one leases
+    
+    public function leases()
+    {
+        return $this->ManyHasOne(Lease::class);
+    }
+    
+
 }

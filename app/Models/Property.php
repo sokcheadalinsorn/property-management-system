@@ -16,4 +16,10 @@ class Property extends Model
        'created_at',
        'updated_at',
     ];
+
+    // Relationship One properties has many units
+    public function units()
+    {
+        return $this->HasMany(Unit::class);
+    }
 }

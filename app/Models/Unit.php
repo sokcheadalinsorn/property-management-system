@@ -17,4 +17,10 @@ class Unit extends Model
         'created_at',
         'updated_at',
     ];
+
+    // Relationship many units has one leases
+    public function leases()
+    {
+        return $this->BelongTo(Lease::class);
+    }
 }

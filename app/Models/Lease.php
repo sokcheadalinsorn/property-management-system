@@ -16,4 +16,10 @@ class Lease extends Model
         'status',
         'created_at',
     ];
+
+    // Relationship One leases has One tenants
+    public function tenants()
+    {
+        return $this->HasOne(Tenant::class);
+    }
 }

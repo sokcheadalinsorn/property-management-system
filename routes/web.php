@@ -18,3 +18,8 @@ Route::get('/tenants', [TenantController::class, 'index']);
 Route::get('/leases', [LeaseController::class, 'index']);
 Route::get('/payments', [PaymentController::class, 'index']);
 Route::get('/maintenances', [MaintenanceController::class, 'index']);
+
+
+Route::get('/dashboard', function () {
+    return view('dashboard.index');
+});

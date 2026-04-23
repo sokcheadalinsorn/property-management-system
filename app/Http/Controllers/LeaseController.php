@@ -9,6 +9,11 @@ class LeaseController extends Controller
 {
     public function index()
     {
-        return Lease::all();
+        return view('lease.index');
+    }
+    public function store(Request $request)
+    {
+        $email = $request->input('email');
+        dd($email);
     }
 }

@@ -11,18 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('leases', function (Blueprint $table) {
-            $table->id();
-            $table->unsignedBigInteger('unit_id');
-            $table->foreign('unit_id')->references('id')->on('units');
-            $table->unsignedBigInteger('tenant_id');
-            $table->foreign('tenant_id')->references('id')->on('tenants');
-            $table->date('start_date');
-            $table->date('end_date');
-            $table->string('status');
-            $table->date('created_at');
-            $table->timestamps();
-        });
+       Schema::create('leases', function (Blueprint $table) {
+    $table->id();
+    $table->foreignId('unit_id')->constrained()->onDelete('cascade');
+    $table->foreignId('tenant_id')->constrained()->onDelete('cascade');
+    $table->date('start_date');
+    $table->date('end_date');
+    $table->string('status');
+    $table->timestamps(); // ✅ only this
+});
     }
 
     /**

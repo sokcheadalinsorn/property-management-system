@@ -13,14 +13,11 @@ return new class extends Migration
     {
         Schema::create('units', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('property_id');
-            $table->foreign('property_id')->references('id')->on('properties');
+            $table->foreignId('property_id')->constrained()->onDelete('cascade');
             $table->string('unit_number');
-            $table->decimal('rent_price');
-            $table->srting('status');
-            $table->date('created_at');
-            $table->date('updated_at');
-            $table->timestamps();
+            $table->decimal('rent_price', 8, 2);
+            $table->string('status');
+            $table->timestamps(); // ✅ only this
         });
     }
 

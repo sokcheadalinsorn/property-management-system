@@ -11,24 +11,17 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('properties', function (Blueprint $table) {
+        Schema::create('rents', function (Blueprint $table) {
             $table->id();
-            $table->string('building');
-            $table->string('unit');
-            $table->string('type');
-            $table->string('size');
-            $table->string('rent');
-            $table->string('status');
             $table->timestamps();
         });
     }
 
-    #Relationship 
     /**
      * Reverse the migrations.
      */
     public function down(): void
     {
-        Schema::dropIfExists('properties');
+        Schema::dropIfExists('rents');
     }
 };

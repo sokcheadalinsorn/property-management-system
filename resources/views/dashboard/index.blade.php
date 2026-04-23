@@ -7,9 +7,12 @@
         <x-navbars />
            
             <x-cards />
-             <x-sales-report />
+              <div class=" flex gap-7">
+               <x-sales-report />
             <x-sales-activity />
         </div>
+        </div>
+      
 
        
    

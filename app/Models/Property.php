@@ -11,10 +11,13 @@ class Property extends Model
     protected $primaryKey = 'id';
 
     protected $fillable = [
-       'name',
-       'address', 
-       'created_at',
-       'updated_at',
+        'building',
+        'unit',
+        'type',
+        'size',
+        'rent',
+        'status'
+        
     ];
 
     // Relationship One properties has many units

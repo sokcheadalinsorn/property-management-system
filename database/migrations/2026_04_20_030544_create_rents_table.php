@@ -11,16 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-      Schema::create('leases', function (Blueprint $table) {
-    $table->id();
-    $table->string('tenant_name');
-    $table->string('unit');
-    $table->date('start_date');
-    $table->date('end_date');
-    $table->string('monthly_rent'); 
-    $table->string('desposit');
-    $table->timestamps();
-});
+        Schema::create('rents', function (Blueprint $table) {
+            $table->id();
+            $table->string('name_house');
+            $table->string('price');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -28,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('leases');
+        Schema::dropIfExists('rents');
     }
 };

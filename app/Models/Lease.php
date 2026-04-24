@@ -11,10 +11,12 @@ class Lease extends Model
     protected $primaryKey = 'id';   
 
     protected $fillable = [
+        'tenant_name',
+        'unit',
         'start_date',
-        'end_at',
-        'status',
-        'created_at',
+        'end_date',
+        'monthly_rent', 
+        'desposit',
     ];
 
     // Relationship One leases has One tenants

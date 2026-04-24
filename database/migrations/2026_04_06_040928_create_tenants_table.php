@@ -13,14 +13,13 @@ return new class extends Migration
     {
         Schema::create('tenants', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('maintenance_id');
-            $table->foreign('maintenance_id')->references('id')->on('maintenances');
-            $table->string('name');
-            $table->email('email');
-            $table->string('phone_number');
-            $table->date('created_at');
-            $table->sate('updated_at');
-            $table->timestamps();
+            $table->string('fullName');
+            $table->string('email'); 
+            $table->string('phone');
+            $table->string('unit');
+            $table->dateTime('lease_start');
+            $table->dateTime('lease_end');
+            $table->timestamps(); 
         });
     }
 

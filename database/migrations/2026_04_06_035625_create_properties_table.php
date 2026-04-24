@@ -13,12 +13,12 @@ return new class extends Migration
     {
         Schema::create('properties', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('unit_id');
-            $table->foreign('unit_id')->references('id')->on('units');
-            $table->string('name');
-            $table->string('address');
-            $table->date('created_at');
-            $table->date('updated_at');
+            $table->string('building');
+            $table->string('unit');
+            $table->string('type');
+            $table->string('size');
+            $table->string('rent');
+            $table->string('status');
             $table->timestamps();
         });
     }

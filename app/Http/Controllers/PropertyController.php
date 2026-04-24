@@ -15,7 +15,7 @@ class PropertyController extends Controller
 
     public function show($id)
     {
-       dd($id);
+    //    dd($id);
     }
         
     public function store(Request $request)

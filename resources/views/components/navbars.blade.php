@@ -1,4 +1,4 @@
-<div class="bg-[#fff1d8] p-4 flex items-center justify-between">
+<div class="bg-[#fff1d8] p-4 flex items-center justify-between ">
 
   <h1 class="text-xl font-semibold text-gray-800">Dashboard</h1>
   

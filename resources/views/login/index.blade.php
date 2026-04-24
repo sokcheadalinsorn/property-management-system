@@ -40,7 +40,7 @@
                             type="password" name="password" id="password" placeholder="••••••••">
                     </div>
 
-                    <button onclick="" class="mt-4 bg-[#fff1d8] p-3 text-center font-bold text-lg w-full rounded-lg text-gray-800 shadow-sm hover:bg-[#ffd6a6] active:scale-[0.98] transition-all duration-200 text-red-600">
+                    <button onclick="" class="mt-4 bg-[#fff1d8] p-3 text-center font-bold text-lg w-full rounded-lg shadow-sm hover:bg-[#ffd6a6] active:scale-[0.98] transition-all duration-200 text-red-600">
                         Login As Admin
                     </button>
                 </div>

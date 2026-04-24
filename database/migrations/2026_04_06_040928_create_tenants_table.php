@@ -14,10 +14,10 @@ return new class extends Migration
         Schema::create('tenants', function (Blueprint $table) {
             $table->id();
             $table->string('fullName');
-            $table->string('email'); // ✅ correct
+            $table->string('email'); 
             $table->string('phone');
             $table->string('unit');
-            $table->dataTime('lease_start');
+            $table->dateTime('lease_start');
             $table->dateTime('lease_end');
             $table->timestamps(); 
         });

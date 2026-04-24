@@ -18,7 +18,6 @@ return new class extends Migration
             $table->decimal('amount');
             $table->date('payment_date');
             $table->string('status');
-            
             $table->timestamps();
         });
     }

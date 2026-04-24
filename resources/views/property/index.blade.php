@@ -33,7 +33,7 @@
             style="display:none; position:fixed; top:0; left:0; width:100%; height:100%;
      background:rgba(0,0,0,0.5); z-index:999; justify-content:center; align-items:center;">
 
-            <div class= "font-sans space-y-5 bg-white p-6 rounded-xl shadow-xl w-full max-w-md">
+            <div class="font-sans space-y-5 bg-white p-6 rounded-xl shadow-xl w-full max-w-md">
 
                 <p class=" font-bold text-2xl font-bold mb-4">Add New Property</p>
                 <p class="text-gray-500">Add a new rental property to the system</p>
@@ -41,32 +41,32 @@
                 <form method="POST" action="{{ route('properties.store') }}">
                     @csrf
                     <div class="space-y-5">
-                         <label class="block text-sm font-semibold text-gray-700 mb-1" for="font">Building Name</label>
-                    <input type="text" name="building" placeholder="e.g Building A" class="bg-gray-200 border border-gray-200 rounded-lg p-3 w-full outline-none focus:ring-2 focus:ring-[#FFE8BE] focus:bg-white transition-all"> 
+                        <label class="block text-sm font-semibold text-gray-700 mb-1" for="font">Building Name</label>
+                        <input type="text" name="building" placeholder="e.g Building A" class="bg-gray-200 border border-gray-200 rounded-lg p-3 w-full outline-none focus:ring-2 focus:ring-[#FFE8BE] focus:bg-white transition-all">
 
-                    <label class="block text-sm font-semibold text-gray-700 mb-1" for="font">Unit Number</label>
-                    <input type="text" name="building" placeholder="e.g 101" class="bg-gray-200 border border-gray-200 rounded-lg p-3 w-full outline-none focus:ring-2 focus:ring-[#FFE8BE] focus:bg-white transition-all"> <br/>
+                        <label class="block text-sm font-semibold text-gray-700 mb-1" for="font">Unit Number</label>
+                        <input type="text" name="unit" placeholder="e.g 101" class="bg-gray-200 border border-gray-200 rounded-lg p-3 w-full outline-none focus:ring-2 focus:ring-[#FFE8BE] focus:bg-white transition-all"> <br />
 
-                    <label class="block text-sm font-semibold text-gray-700 mb-1" for="font">Type</label>
-                    <input type="text" name="building" placeholder="e.g 2BR" class="bg-gray-200 border border-gray-200 rounded-lg p-3 w-full outline-none focus:ring-2 focus:ring-[#FFE8BE] focus:bg-white transition-all">
+                        <label class="block text-sm font-semibold text-gray-700 mb-1" for="font">Type</label>
+                        <input type="text" name="type" placeholder="e.g 2BR" class="bg-gray-200 border border-gray-200 rounded-lg p-3 w-full outline-none focus:ring-2 focus:ring-[#FFE8BE] focus:bg-white transition-all">
 
-                    <label class="block text-sm font-semibold text-gray-700 mb-1" for="font">Size</label>
-                    <input type="text" name="building" placeholder="e.g 30m" class="bg-gray-200 border border-gray-200 rounded-lg p-3 w-full outline-none focus:ring-2 focus:ring-[#FFE8BE] focus:bg-white transition-all">
+                        <label class="block text-sm font-semibold text-gray-700 mb-1" for="font">Size</label>
+                        <input type="text" name="size" placeholder="e.g 30m" class="bg-gray-200 border border-gray-200 rounded-lg p-3 w-full outline-none focus:ring-2 focus:ring-[#FFE8BE] focus:bg-white transition-all">
 
-                    <label class="block text-sm font-semibold text-gray-700 mb-1" for="font">Monthly Rent</label>
-                    <input type="text" name="building" placeholder="e.g 100$" class="bg-gray-200 border border-gray-200 rounded-lg p-3 w-full outline-none focus:ring-2 focus:ring-[#FFE8BE] focus:bg-white transition-all">
-                    
-                    <label class="block text-sm font-semibold text-gray-700 mb-1" for="font">Satus</label>
-                    <select name="status" class="bg-gray-200 border border-gray-200 rounded-lg p-3 w-full outline-none focus:ring-2 focus:ring-[#FFE8BE] focus:bg-white transition-all">
-                        <option>Available</option>
-                        <option>Occupied</option>
-                        <option>Maintenance</option>
-                    </select>
+                        <label class="block text-sm font-semibold text-gray-700 mb-1" for="font">Monthly Rent</label>
+                        <input type="text" name="rent" placeholder="e.g 100$" class="bg-gray-200 border border-gray-200 rounded-lg p-3 w-full outline-none focus:ring-2 focus:ring-[#FFE8BE] focus:bg-white transition-all">
 
-                    <div class="flex justify-between">
-                        <button type="button" onclick="closeForm()" class="mt-4 bg-[#fff1d8] p-3 text-center font-bold text-lg rounded-lg shadow-sm hover:bg-[#ffd6a6] active:scale-[0.98] transition-all duration-200 text-black-600">Cancel</button>
-                        <button type="submit" class="mt-4 bg-[#fff1d8] p-3 text-center font-bold text-lg rounded-lg  shadow-sm hover:bg-[#ffd6a6] active:scale-[0.98] transition-all duration-200 text-red-600">Save</button>
-                    </div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-1" for="font">Satus</label>
+                        <select name="status" class="bg-gray-200 border border-gray-200 rounded-lg p-3 w-full outline-none focus:ring-2 focus:ring-[#FFE8BE] focus:bg-white transition-all">
+                            <option>Available</option>
+                            <option>Occupied</option>
+                            <option>Maintenance</option>
+                        </select>
+
+                        <div class="flex justify-between">
+                            <button type="button" onclick="closeForm()" class="mt-4 bg-[#fff1d8] p-3 text-center font-bold text-lg rounded-lg shadow-sm hover:bg-[#ffd6a6] active:scale-[0.98] transition-all duration-200 text-black-600">Cancel</button>
+                            <button type="submit" class="mt-4 bg-[#fff1d8] p-3 text-center font-bold text-lg rounded-lg  shadow-sm hover:bg-[#ffd6a6] active:scale-[0.98] transition-all duration-200 text-red-600">Save</button>
+                        </div>
                     </div>
                 </form>
             </div>
@@ -99,18 +99,22 @@
                         <th class="text-start  font-bold text-2xl text-gray-600  bg-[#fff1d8] hover:bg-[#ffd6a6] px-2 py-2 ">Size</th>
                         <th class="text-start  font-bold text-2xl text-gray-600 bg-[#fff1d8] hover:bg-[#ffd6a6] px-2 py-2 ">Rent</th>
                         <th class="text-start  font-bold text-2xl text-gray-600 bg-[#fff1d8] hover:bg-[#ffd6a6] px-2 py-2 rounded-sm  ">Status</th>
+                        <th class="text-start  font-bold text-2xl text-gray-600 bg-[#fff1d8] hover:bg-[#ffd6a6] px-2 py-2 rounded-sm  ">Action</th>
                     </tr>
                 </thead>
 
                 <tbody class=" ">
                     @foreach($properties as $property)
                     <tr class="text-start">
-                        <td class=" text-start font-sans font-medium py-4 px-4 bg-gray-90 hover:bg-gray-200 ">{{ $property->building }}</td>
+                        <!-- <a href="/properties/{{ $property->id }}">hi</a> -->
+
+                        <td class=" text-start font-sans font-medium py-4 px-4 bg-gray-90 hover:bg-gray-200 "><a href="/properies/{{ $property->id }}">{{ $property->building }}</a></td>
                         <td class=" text-start font-sans font-medium py-4 px-4 bg-gray-90 hover:bg-gray-200 ">{{ $property->unit }}</td>
                         <td class="text-start  font-sans font-medium py-4 px-4 bg-gray-90 hover:bg-gray-200 ">{{ $property->type }}</td>
                         <td class="text-start  font-sans font-medium py-4 px-4 bg-gray-90 hover:bg-gray-200 ">{{ $property->size }}</td>
                         <td class="text-start  font-sans font-medium py-4 px-4 bg-gray-90 hover:bg-gray-200 ">{{ $property->rent }}</td>
                         <td class="text-start  font-sans font-medium py-4 px-4 bg-gray-90"><span class="bg-green-200 hover:bg-green-400  rounded-full p-2 ">{{ $property->status }}</span></td>
+                        
                     </tr>
                     @endforeach
                 </tbody>

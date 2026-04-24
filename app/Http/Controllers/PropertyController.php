@@ -11,10 +11,13 @@ class PropertyController extends Controller
     public function index(){
         $properties = Property::all();
         return view('property.index', compact('properties'));
-        
+    }
+
+    public function show($id)
+    {
+       dd($id);
     }
         
-    
     public function store(Request $request)
     {
     

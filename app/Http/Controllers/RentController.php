@@ -9,7 +9,7 @@ class RentController extends Controller
 {
     public function index()
     {   
-        $name = 'dalin';
-        return view ('rent.index', compact('name') );
+        $rents = Rent::all();
+        return view ('rent.index', compact('rents') );
     }
 }

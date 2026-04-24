@@ -11,14 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-       Schema::create('leases', function (Blueprint $table) {
+      Schema::create('leases', function (Blueprint $table) {
     $table->id();
-    $table->foreignId('unit_id')->constrained()->onDelete('cascade');
-    $table->foreignId('tenant_id')->constrained()->onDelete('cascade');
+    $table->string('tenant_name');
+    $table->string('unit');
     $table->date('start_date');
     $table->date('end_date');
-    $table->string('status');
-    $table->timestamps(); // ✅ only this
+    $table->string('monthly_rent'); 
+    $table->string('desposit');
+    $table->timestamps();
 });
     }
 

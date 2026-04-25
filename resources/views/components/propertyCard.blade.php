@@ -1,0 +1,29 @@
+<table>
+    <thead>
+        <tr>
+            <th>Build</th>
+            <th>Unit</th>
+            <th>Type</th>
+            <th>Size</th>
+            <th>Rent</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>January</td>
+            <td>$100</td>
+        </tr>
+        <tr>
+            <td>February</td>
+            <td>$80</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td>Sum</td>
+            <td>$180</td>
+        </tr>
+    </tfoot>
+</table>

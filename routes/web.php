@@ -22,6 +22,8 @@ Route::get('/payments', [PaymentController::class, 'index']);
 Route::get('/maintenances', [MaintenanceController::class, 'index']);
 Route::get('/rents', [RentController::class, 'index']);
 Route::post('/properties', [PropertyController::class, 'store'])->name('properties.store');
+Route::post('/leases', [LeaseController::class, 'store'])->name('leases.store');
+Route::post('/tenants', [TenantController::class, 'store'])->name('lease.store');
 
 // define route in view
 Route::get('/dashboard', function(){
@@ -34,14 +36,6 @@ Route::get('/lease', function(){
 
 Route::get('/payment', function(){
     return view('payment.index');
-});
-
-Route::get('/properties', function(){
-    return view('property.index');
-});
-
-Route::get('/tenant', function(){
-    return view('tenant.index');
 });
 
 Route::get('/maintenance', function(){
@@ -62,3 +56,7 @@ Route::get('/login', function() {
 Route::get('/', function () {
     return view('home');
 });
+
+Route::get('/login', [AuthController::class, 'showLogin']);
+Route::post('/login', [AuthController::class, 'login']);
+Route::post('/logout', [AuthController::class, 'logout']);

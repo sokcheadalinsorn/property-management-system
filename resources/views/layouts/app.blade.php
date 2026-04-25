@@ -5,25 +5,16 @@
     <title>Dashboard</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100">
+<body>
+    <div class="flex">
+        <!-- Sidebar Component -->
+        <x-sidebar />
 
-<div class="flex">
-
-    <!-- Sidebar Component -->
-    <!-- <x-sidebar /> -->
-
-    <!-- Main Content -->
-   
-        @yield('content')
-   
-   <!-- <div class="flex-1 p-2"> -->
-    
-    <!-- <x-navbar />
-    <x-card />
-   -->
-   <!-- </div> -->
-  
-</div>
+        <!-- Page Content -->
+        <div class="flex-1 p-5">
+            {{ $slot }}
+        </div>
+    </div>
 
 </body>
 </html>

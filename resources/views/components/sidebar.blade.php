@@ -5,24 +5,25 @@
         Jinlong Property
     </div>
 
+    
     <nav class="flex-1 p-4 space-y-2 ">
-        <a href="#" class="flex items-center gap-3 p-2 rounded hover:bg-[#ffd6a6] font-semibold transition">
+        <a href="/dashboards" class="flex items-center gap-3 p-2 rounded hover:bg-[#ffd6a6] font-semibold transition">
             <i class="fa-solid fa-building-columns text-lg "></i>
             <span>Dashboard</span>
         </a>
          
-         <a href="#" class="flex items-center gap-3 p-2 rounded hover:bg-[#ffd6a6] font-semibold transition">
+         <a href="/properties" class="flex items-center gap-3 p-2 rounded hover:bg-[#ffd6a6] font-semibold transition">
             <i class="fa-solid fa-house"></i>
             <span>Properties</span>
         </a>
-         <a href="#" class="flex items-center gap-3 p-2 rounded hover:bg-[#ffd6a6] font-semibold transition">
+         <a href="/tenants" class="flex items-center gap-3 p-2 rounded hover:bg-[#ffd6a6] font-semibold transition">
                <i class="fa-solid fa-users"></i>
             <span>Tenants</span>
         </a>
-         <a href="#" class="flex items-center gap-3 p-2 rounded hover:bg-[#ffd6a6] font-semibold transition">
+         <a href="/payments" class="flex items-center gap-3 p-2 rounded hover:bg-[#ffd6a6] font-semibold transition">
       <i class="fa-solid fa-dollar-sign"></i>
             <span>Payments</span>
-        </a> <a href="#" class="flex items-center gap-3 p-2 rounded hover:bg-[#ffd6a6] font-semibold transition">
+        </a> <a href="/maintenaces" class="flex items-center gap-3 p-2 rounded hover:bg-[#ffd6a6] font-semibold transition">
             <i class="fa-solid fa-screwdriver-wrench"></i>       
             <span>Maintenance</span>
         </a>

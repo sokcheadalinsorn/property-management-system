@@ -11,9 +11,11 @@ class Payment extends Model
     protected $primaryKey = 'id';
 
     protected $fillable = [
+        'tenant_name',
+        'unit',
         'amount',
-        'payment_date',
-        'status',
+        'month',
+        'due_date',
         'created_at',
         'update_at',
     ];

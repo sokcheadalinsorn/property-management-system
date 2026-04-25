@@ -15,10 +15,11 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('lease_id');
             $table->foreign('lease_id')->references('id')->on('leases');
+            $table->string('tenant_name');
+             $table->string('unit');
+            $table->date ('month');
             $table->decimal('amount');
-            $table->date('payment_date');
-            $table->string('status');
-            
+            $table->date('due_date');            
             $table->timestamps();
         });
     }

@@ -7,7 +7,7 @@
 
     
     <nav class="flex-1 p-4 space-y-2 ">
-        <a href="/dashboards" class="flex items-center gap-3 p-2 rounded hover:bg-[#ffd6a6] font-semibold transition">
+        <a href="/dashboard" class="flex items-center gap-3 p-2 rounded hover:bg-[#ffd6a6] font-semibold transition">
             <i class="fa-solid fa-building-columns text-lg "></i>
             <span>Dashboard</span>
         </a>
@@ -24,7 +24,7 @@
             <i class="fa-solid fa-file"></i>
             <span>Lease</span>
         </a>
-         <a href="/payments" class="flex items-center gap-3 p-2 rounded hover:bg-[#ffd6a6] font-semibold transition">
+         <a href="/payment" class="flex items-center gap-3 p-2 rounded hover:bg-[#ffd6a6] font-semibold transition">
       <i class="fa-solid fa-dollar-sign"></i>
             <span>Payments</span>
         </a> <a href="/maintenaces" class="flex items-center gap-3 p-2 rounded hover:bg-[#ffd6a6] font-semibold transition">

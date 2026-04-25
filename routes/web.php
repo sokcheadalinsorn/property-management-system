@@ -18,7 +18,10 @@ Route::get('/properties', [PropertyController::class, 'index']);
 Route::get('/units', [UnitController::class, 'index']);
 Route::get('/tenants', [TenantController::class, 'index']);
 Route::get('/leases', [LeaseController::class, 'index']);
+
 Route::get('/payments', [PaymentController::class, 'index']);
+Route::get('payments', [PaymentController::class, 'store'])->name('payments.store');
+
 Route::get('/maintenances', [MaintenanceController::class, 'index']);
 Route::get('/rents', [RentController::class, 'index']);
 Route::post('/properties', [PropertyController::class, 'store'])->name('properties.store');

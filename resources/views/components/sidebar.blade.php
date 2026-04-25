@@ -20,6 +20,10 @@
                <i class="fa-solid fa-users"></i>
             <span>Tenants</span>
         </a>
+         <a href="/leases" class="flex items-center gap-3 p-2 rounded hover:bg-[#ffd6a6] font-semibold transition">
+            <i class="fa-solid fa-file"></i>
+            <span>Lease</span>
+        </a>
          <a href="/payments" class="flex items-center gap-3 p-2 rounded hover:bg-[#ffd6a6] font-semibold transition">
       <i class="fa-solid fa-dollar-sign"></i>
             <span>Payments</span>

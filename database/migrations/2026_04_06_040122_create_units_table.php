@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('unit_number');
             $table->decimal('rent_price', 8, 2);
             $table->string('status');
-            $table->timestamps(); // ✅ only this
+            $table->timestamps(); 
         });
     }
 

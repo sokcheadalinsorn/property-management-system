@@ -13,10 +13,10 @@ return new class extends Migration
     {
         Schema::create('payments', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('lease_id');
+            $table->unsignedBigInteger('lease_id')->nullable();
             $table->foreign('lease_id')->references('id')->on('leases');
             $table->string('tenant_name');
-             $table->string('unit');
+            $table->string('unit')->nullable();
             $table->date ('month');
             $table->decimal('amount');
             $table->date('due_date');            

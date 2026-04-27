@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('email'); // ✅ correct
             $table->string('phone');
             $table->string('unit');
-            $table->dataTime('lease_start');
+            $table->dateTime('lease_start');
             $table->dateTime('lease_end');
             $table->timestamps(); 
         });

@@ -26,8 +26,8 @@
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="h-4 w-4 text-red-600">
                         <path d="M352 128C352 110.3 337.7 96 320 96C302.3 96 288 110.3 288 128L288 288L128 288C110.3 288 96 302.3 96 320C96 337.7 110.3 352 128 352L288 352L288 512C288 529.7 302.3 544 320 544C337.7 544 352 529.7 352 512L352 352L512 352C529.7 352 544 337.7 544 320C544 302.3 529.7 288 512 288L352 288L352 128z" />
                     </svg>
-
-                    <button onclick="toggleForm()"> Add Property</button>
+                    <button onclick="toggleForm()">Add Payment</button>
+         
                 </div>
             </div>
             <x-card-payment />
@@ -40,23 +40,31 @@
                     <h2 class="text-2xl font-bold mb-2">Add Payment Record</h2>
                     <p class="text-gray-500 mb-4">create a new payment record</p>
 
-                     <form method="POST" action="{{ route('properties.store') }}">
-                        @csrf
+                     <form action="{{ route('payment.store') }}" method="POST">
+                          @csrf
                         <div class="space-y-5">
-                            <label class="block text-sm font-semibold text-gray-700 mb-1" for="font">Tenant Name*</label>
-                            <input type="text" name="building" placeholder="e.g.Zhang Wei" class="bg-gray-200 border border-gray-200 rounded-lg p-3 w-full outline-none focus:ring-2 focus:ring-[#FFE8BE] focus:bg-white transition-all">
+                            <label class="block text-sm font-semibold text-gray-700 mb-1" for="font">Lease ID</label>
+                              <select name="lease_id" class="bg-gray-200 p-3 w-full rounded-lg">
+                                    <option value="1">Lease 1</option>
+                                    <option value="2">Lease 2</option>
+                                    <option value="2">Lease 3</option>
 
-                            <label class="block text-sm font-semibold text-gray-700 mb-1" for="font">Unit Number</label>
-                            <input type="text" name="building" placeholder="e.g Building A-101" class="bg-gray-200 border border-gray-200 rounded-lg p-3 w-full outline-none focus:ring-2 focus:ring-[#FFE8BE] focus:bg-white transition-all"> <br />
+                               </select>
+
+                            <label class="block text-sm font-semibold text-gray-700 mb-1" for="font">Tenant Name*</label>
+                            <input type="text" name="tenant_name" placeholder="e.g.Zhang Wei" class="bg-gray-200 border border-gray-200 rounded-lg p-3 w-full outline-none focus:ring-2 focus:ring-[#FFE8BE] focus:bg-white transition-all">
+
+                            <label class="block text-sm font-semibold text-gray-700 mb-1" for="font">Unit </label>
+                            <input type="text" name="unit" placeholder="Unit (e.g. A101)" class="bg-gray-200 border border-gray-200 rounded-lg p-3 w-full outline-none focus:ring-2 focus:ring-[#FFE8BE] focus:bg-white transition-all"> 
 
                             <label class="block text-sm font-semibold text-gray-700 mb-1" for="font">Amount</label>
-                            <input type="text" name="building" placeholder="e.g $150" class="bg-gray-200 border border-gray-200 rounded-lg p-3 w-full outline-none focus:ring-2 focus:ring-[#FFE8BE] focus:bg-white transition-all">
+                            <input type="text" name="amount" placeholder="e.g $150" class="bg-gray-200 border border-gray-200 rounded-lg p-3 w-full outline-none focus:ring-2 focus:ring-[#FFE8BE] focus:bg-white transition-all">
 
                             <label class="block text-sm font-semibold text-gray-700 mb-1" for="font">Month</label>
-                            <input type="text" name="building" placeholder="e.g. April 2026" class="bg-gray-200 border border-gray-200 rounded-lg p-3 w-full outline-none focus:ring-2 focus:ring-[#FFE8BE] focus:bg-white transition-all">
-
+                            <input type="date" id="datemax" name="month" max="2026-10-10" class="bg-gray-200 border border-gray-200 rounded-lg p-3 w-full outline-none focus:ring-2 focus:ring-[#FFE8BE] focus:bg-white transition-all">
+                            
                             <label class="block text-sm font-semibold text-gray-700 mb-1" for="font">Due Date*</label>
-                            <input type="text" name="building" placeholder="e.g 100$" class="bg-gray-200 border border-gray-200 rounded-lg p-3 w-full outline-none focus:ring-2 focus:ring-[#FFE8BE] focus:bg-white transition-all">                           
+                            <input type="date" id="datemax" name="due_date" max="2026-10-10" class="bg-gray-200 border border-gray-200 rounded-lg p-3 w-full outline-none focus:ring-2 focus:ring-[#FFE8BE] focus:bg-white transition-all">
                             <div class="flex justify-between">
                                 <button type="button" onclick="closeForm()" class="mt-4 bg-[#fff1d8] p-3 text-center font-bold text-lg rounded-lg shadow-sm hover:bg-[#ffd6a6] active:scale-[0.98] transition-all duration-200 text-black-600">Cancel</button>
                                 <button type="submit" class="mt-4 bg-[#fff1d8] p-3 text-center font-bold text-lg rounded-lg  shadow-sm hover:bg-[#ffd6a6] active:scale-[0.98] transition-all duration-200 text-red-600">Save</button>
@@ -97,8 +105,19 @@
                         </tr>
                     </thead>
 
-                  
-                </table>
+                    <tbody class="">
+                        @foreach($thePayment as $payment)
+                        <tr class="text-start">
+                            <td class=" text-start font-sans font-medium py-4 px-4 bg-gray-90 hover:bg-gray-200 ">{{ $payment->tenant_name }}</td>
+                            <td class=" text-start font-sans font-medium py-4 px-4 bg-gray-90 hover:bg-gray-200 ">{{ $payment->unit }}</td>
+                            <td class="text-start  font-sans font-medium py-4 px-4 bg-gray-90 hover:bg-gray-200 ">{{ $payment->amount }}</td>
+                            <td class="text-start  font-sans font-medium py-4 px-4 bg-gray-90 hover:bg-gray-200 ">{{ $payment->month }}</td>
+                            <td class="text-start  font-sans font-medium py-4 px-4 bg-gray-90 hover:bg-gray-200 ">{{ $payment->due_date }}</td>
+                        </tr>
+                        @endforeach
+                    </tbody>
+          
+                  </table>
 
 
             </div>
@@ -106,15 +125,18 @@
         </div>
     </div>
 
-    <script>
-        function toggleForm() {
-            document.getElementById("propertyForm").classList.remove("hidden");
-        }
+        <script>
+            function toggleForm() {
+                let form = document.getElementById("propertyForm");
 
-        function closeForm() {
-            document.getElementById("propertyForm").classList.add("hidden");
-        }
-    </script>
+                if (form.style.display === "none" || form.style.display === "") {
+                    form.style.display = "flex"; // or block
+                } else {
+                    form.style.display = "none";
+                }
+            }
+        </script>
+
 
 </body>
 

@@ -19,8 +19,9 @@ Route::get('/units', [UnitController::class, 'index']);
 Route::get('/tenants', [TenantController::class, 'index']);
 Route::get('/leases', [LeaseController::class, 'index']);
 
-Route::get('/payments', [PaymentController::class, 'index']);
-Route::get('payments', [PaymentController::class, 'store'])->name('payments.store');
+Route::get('/payments', [PaymentController::class, 'index'])->name('payment');
+Route::post('/payments', [PaymentController::class, 'store'])->name('payment.store');
+
 
 Route::get('/maintenances', [MaintenanceController::class, 'index']);
 Route::get('/rents', [RentController::class, 'index']);
@@ -37,9 +38,6 @@ Route::get('/lease', function(){
     return view('lease.index');
 });
 
-Route::get('/payment', function(){
-    return view('payment.index');
-});
 
 Route::get('/maintenance', function(){
     return view('maintenance.index');

@@ -13,7 +13,7 @@
     <p style="color:red;">{{ session('error') }}</p>
     @endif
 
-    <form action="{{route('login.name')" method="post">
+    <form action="{{route('login.store')}}  " method="post">
         @csrf
         <div class="font-sans flex items-center justify-center min-h-screen bg-gray-50">
             <!-- Added transition and hover shadow for a more premium feel -->

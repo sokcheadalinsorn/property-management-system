@@ -24,7 +24,7 @@ class TenantController extends Controller
         $lease_end = $request->input('lease_end'); 
         
         // save to database
-        \App\Models\Lease::create([
+        Tenant::create([
             'full_name' => $full_name,
             'email' => $email,
             'phone' => $phone,

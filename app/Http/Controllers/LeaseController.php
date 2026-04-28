@@ -28,7 +28,7 @@ class LeaseController extends Controller
         $desposit = $request->input('desposit');
         
         // save to database
-        \App\Models\Lease::create([
+        Lease::create([
             'tenant_name' => $tenant_name,
             'unit' => $unit,
             'start_date' => $start_date,

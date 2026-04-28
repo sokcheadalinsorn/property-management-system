@@ -13,10 +13,18 @@ class PropertyController extends Controller
         return view('property.index', compact('properties'));
     }
 
+    // parametter for details
     public function show($id)
     {
     //    dd($id);
     }
+
+    // kom data
+    // public function index() 
+    // {
+    //     $properies = Property::paginate(4);
+    //     return view('property.index', compact('properties'));
+    // }
         
     public function store(Request $request)
     {
@@ -29,12 +37,14 @@ class PropertyController extends Controller
         $status = $request->input('status');
         
         // save to database
-        \App\Models\Property::create([
+        Property::create([
             'building' => $building, 
             'unit' => $unit,
             'type' => $type,
             'size' => $size,
-            'rent' => $rent,
+            'rent' => $rent,   
+
+           
             'status' => $status,
             
         ]);

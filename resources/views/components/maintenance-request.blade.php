@@ -3,7 +3,7 @@
 
     <div class="flex justify-between items-center mb-5">
       <h2 class="text-lg font-semibold text-gray-800">Maintenance Requests</h2>
-      <a href="#" class="text-blue-500 text-sm font-medium hover:underline  ">
+      <a href="maintenance" class="text-blue-500 text-sm font-medium hover:underline  ">
         View All →
       </a>
     </div>
